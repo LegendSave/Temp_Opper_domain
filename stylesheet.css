@@ -1,8 +1,11 @@
 .slide:hover{
     opacity: 0.5;
 }
+html{
+    --height 
+}
 .slide{
     background-color: black;
     border-radius: 20px;
-    height: 50vh;
+    height: 
 }

@@ -1,3 +1,3 @@
 var div = document.getElementsByClassName("slide");
 
-div.style.height = window.innerHeight;
+div.height = window.innerHeight;

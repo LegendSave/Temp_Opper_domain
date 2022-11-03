@@ -8,5 +8,5 @@ slide.requestFullscreen();
 }
 
 c.beginPath();
-c.fillStyle = "black";
+c.fillStyle = "green";
 c.fillRect(0, 0, slide.width, slide.height);

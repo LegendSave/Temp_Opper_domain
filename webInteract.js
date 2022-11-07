@@ -18,4 +18,4 @@ c.moveTo(cords[1], 0);
 c.lineTo(cords[1], window.innerHeight);
 c.stroke();
 
-c.fillText(cords[0] + "0" + cords[1], 200, 200);
+c.fillText(cords[0] + "Exit" + cords[1] + "Exit" + window.innerWidth, 200, 200);

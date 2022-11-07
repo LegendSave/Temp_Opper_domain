@@ -9,10 +9,6 @@ c.scale(scale, scale);
 c.font = '10px Arial';
 
 var cords = [window.innerWidth / 3, window.innerWidth - (window.innerWidth / 3)];
-c.beginPath();
-c.strokeStyle = "black";
-c.moveTo(cords[0], 0);
-c.lineTo(cords[0], window.innerHeight);
-c.moveTo(cords[1], 0);
-c.lineTo(cords[1], window.innerHeight);
-c.stroke();
+
+c.fillRect(cords[1], 200, 20, 20);
+c.fillRect(cords[0], 200, 20, 20);

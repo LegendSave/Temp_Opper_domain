@@ -8,7 +8,8 @@ canvas.height = window.innerHeight;
 c.scale(scale, scale);
 c.font = '10px Arial';
 
-c.fillText("content", 300, 300);
+c.fillText(cords[0], 300, 300);
 
-var item = ["H", "He", "Hel", "Hell", "Hello"];
-var itemCount = 0;
+var cords = [`${window.innerWidth - (window.innerWidth / 3)}`, `${window.innerWidth / 3}`];
+
+

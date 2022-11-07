@@ -9,7 +9,7 @@ c.scale(scale, scale);
 c.font = '10px Arial';
 
 var cords = [`${window.innerWidth - (window.innerWidth / 3)}`, `${window.innerWidth / 3}`];
-
+var cordTs = cords[1] + cords[0];
 c.beginPath();
 c.strokeStyle = "black";
 c.moveTo(cords[0], 0);
@@ -18,4 +18,4 @@ c.moveTo(cords[1], 0);
 c.lineTo(cords[1], window.innerHeight);
 c.stroke();
 
-c.fillText(cords[0] + "Exit" + cords[1] + "Exit" + window.innerWidth + "Exit" + (cords[0] + cords[1]), 200, 200);
+c.fillText(cords[0] + "Exit" + cords[1] + "Exit" + window.innerWidth + "Exit" + cordTs, 200, 200);

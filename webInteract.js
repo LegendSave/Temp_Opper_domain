@@ -10,4 +10,4 @@ c.font = '10px Arial';
 
 var cords = [`${window.innerWidth - (window.innerWidth / 3)}`, `${window.innerWidth / 3}`];
 
-c.fillText(cords[0], 300, 300);
+c.fillText(cords[1], 300, 300);

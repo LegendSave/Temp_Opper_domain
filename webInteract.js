@@ -17,3 +17,5 @@ c.lineTo(cords[0], window.innerHeight);
 c.moveTo(cords[1], 0);
 c.lineTo(cords[1], window.innerHeight);
 c.stroke();
+
+c.fillText(cords[0] + "0" + cords[1], 200, 200);

@@ -9,7 +9,7 @@ c.scale(scale, scale);
 c.font = '10px Arial';
 
 var cords = [`${window.innerWidth - (window.innerWidth / 3)}`, `${window.innerWidth / 3}`];
-var cordTs = cords[1] + cords[0];
+var cordTs = `${(cords[1] + cords[0])}`;
 c.beginPath();
 c.strokeStyle = "black";
 c.moveTo(cords[0], 0);

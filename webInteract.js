@@ -10,4 +10,4 @@ c.font = '10px Arial';
 
 var cords = [window.innerWidth / 3, window.innerWidth - scaling];
 c.fillRect(cords[1], 200, 20, 20);
-c.fillText(cords[2], 200, 20, 20);
+c.fillRect(cords[0], 200, 20, 20);

@@ -20,7 +20,7 @@ mouseY = e.screenY;
 });
 
 document.addEventListener('mousedown', e => {
-mouseInput = e.eventPhase;
+mouseInput = e.returnValue;
 });
 
 function draw(){

@@ -5,6 +5,7 @@ var scale = window.devicePixelRatio;
 var mouseX;
 var mouseY;
 var mouseInput;
+var keyInput;
 var slideNum = 0;
 var slideContent = ["1st content", "2nd content"];
 canvas.width = window.innerWidth;
@@ -23,6 +24,10 @@ document.addEventListener('mousedown', e => {
 mouseInput = e.returnValue;
 });
 
+document.addEventListener('keypress', e => {
+keyInput = e.returnValue;
+});
+
 function draw(){
     requestAnimationFrame(draw);
     c.clearRect(0, 0, canvas.width, canvas.height);
@@ -36,7 +41,7 @@ function draw(){
         }
         mouseInput = false;
     }
-    if (Math.abs(mouseX) > cord2 && mouseInput){
+    if (Math.abs(mouseX) > cord2 && mouseInput || keyInput == 39){
         c.fillText("Right", canvas.width / 2, 200);
         if(slideNum == 1){
             slideNum = 1;
@@ -51,6 +56,7 @@ function draw(){
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
     }
     if (slideNum == 0){
+        
         c.fillStyle = "pink";
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
     }

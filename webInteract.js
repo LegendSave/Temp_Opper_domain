@@ -31,7 +31,7 @@ keyInput = e.returnValue;
 function draw(){
     requestAnimationFrame(draw);
     c.clearRect(0, 0, canvas.width, canvas.height);
-    if (Math.abs(mouseX) < cord1 && mouseInput){
+    if (Math.abs(mouseX) < cord1 && mouseInput || keyInput == 37){
         c.fillText("Left", canvas.width / 2, 200);
         if (slideNum == 0){
             slideNum = 0;
@@ -56,7 +56,7 @@ function draw(){
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
     }
     if (slideNum == 0){
-        
+
         c.fillStyle = "pink";
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
     }

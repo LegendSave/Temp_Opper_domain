@@ -4,6 +4,7 @@ window.devicePixelRatio = 1;
 var scale = window.devicePixelRatio; 
 var mouseX;
 var mouseY;
+var mouseInput;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 c.scale(scale, scale);
@@ -16,6 +17,10 @@ c.fillRect(cord2, 200, 20, 20);
 document.addEventListener('mousemove', e => {
 mouseX = e.screenX;
 mouseY = e.screenY;
+});
+
+document.addEventListener('mousedown', e => {
+mouseInput = e.eventPhase;
 });
 
 function draw(){
@@ -31,6 +36,7 @@ function draw(){
     c.fillText("Title", 20, 20);
     c.font = '25px Arial';
     c.fillText("Content", 20, 50);
+    c.fillText(mouseInput, canvas.width / 2, 400);
 }
 
 draw();

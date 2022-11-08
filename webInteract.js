@@ -5,6 +5,7 @@ var scale = window.devicePixelRatio;
 var mouseX;
 var mouseY;
 var mouseInput;
+var slideNum = 0;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 c.scale(scale, scale);
@@ -26,20 +27,30 @@ mouseInput = e.returnValue;
 function draw(){
     requestAnimationFrame(draw);
     c.clearRect(0, 0, canvas.width, canvas.height);
-    if (Math.abs(mouseX) < cord1){
+    if (Math.abs(mouseX) < cord1 && mouseInput){
         c.fillText("Left", canvas.width / 2, 200);
+        if (slideNum == 0){
+            slideNum = 0;
+        }
+        else{
+            slideNum -= 1;
+        }
+        mouseInput = false;
     }
-    if (Math.abs(mouseX) > cord2){
+    if (Math.abs(mouseX) > cord2 && mouseInput){
         c.fillText("Right", canvas.width / 2, 200);
-    }
-    if (mouseInput){
-        c.fillText("Clicked", canvas.width / 2, 400);
+        if(slideNum == 1){
+            slideNum = 1;
+        }
+        else{
+            slideNum += 1;
+        }
         mouseInput = false;
     }
     c.font = '50px Arial';
     c.fillText("Title", 20, 20);
     c.font = '25px Arial';
-    c.fillText("Content", 20, 50);
+    c.fillText(slideNum, 20, 50);
 }
 
 draw();

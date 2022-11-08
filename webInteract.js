@@ -32,11 +32,13 @@ function draw(){
     if (Math.abs(mouseX) > cord2){
         c.fillText("Right", canvas.width / 2, 200);
     }
+    if (mouseInput){
+        c.fillText("Clicked", canvas.width / 2, 400);
+    }
     c.font = '50px Arial';
     c.fillText("Title", 20, 20);
     c.font = '25px Arial';
     c.fillText("Content", 20, 50);
-    c.fillText(mouseInput, canvas.width / 2, 400);
 }
 
 draw();

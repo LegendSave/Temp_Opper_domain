@@ -49,22 +49,19 @@ function draw(){
     if (slideNum == 1){
         c.fillStyle = "green";
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        c.font = '50px Arial';
-        c.fillText("Title", 20, 20);
-        c.font = '25px Arial';
-        c.fillText(slideContent[slideNum], 20, 50);
     }
     if (slideNum == 0){
         c.fillStyle = "pink";
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        c.font = '50px Arial';
-        c.fillText("Title", 20, 20);
-        c.font = '25px Arial';
-        c.fillText(slideContent[slideNum], 20, 50);
     }
     if (mouseInput){
         mouseInput = false;
     }
+    c.fillStyle = "black";
+    c.font = '50px Arial';
+    c.fillText("Title", 20, 20);
+    c.font = '25px Arial';
+    c.fillText(slideContent[slideNum], 20, 50);
 }
 
 draw();

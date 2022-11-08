@@ -26,6 +26,10 @@ mouseInput = e.returnValue;
 function draw(){
     requestAnimationFrame(draw);
     c.clearRect(0, 0, canvas.width, canvas.height);
+    c.font = '50px Arial';
+    c.fillText("Title", 20, 20);
+    c.font = '25px Arial';
+    c.fillText(slideContent[slideNum], 20, 50);
     if (Math.abs(mouseX) < cord1 && mouseInput){
         c.fillText("Left", canvas.width / 2, 200);
         if (slideNum == 0){
@@ -57,10 +61,6 @@ function draw(){
     if (mouseInput){
         mouseInput = false;
     }
-    c.font = '50px Arial';
-    c.fillText("Title", 20, 20);
-    c.font = '25px Arial';
-    c.fillText(slideContent[slideNum], 20, 50);
 }
 
 draw();

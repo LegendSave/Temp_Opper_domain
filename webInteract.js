@@ -34,6 +34,7 @@ function draw(){
     }
     if (mouseInput){
         c.fillText("Clicked", canvas.width / 2, 400);
+        mouseInput = false;
     }
     c.font = '50px Arial';
     c.fillText("Title", 20, 20);

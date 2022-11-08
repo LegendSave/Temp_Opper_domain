@@ -25,7 +25,7 @@ mouseInput = e.returnValue;
 });
 
 document.addEventListener('keypress', e => {
-keyInput = e.returnValue;
+keyInput = e.value;
 });
 
 function draw(){

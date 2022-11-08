@@ -6,14 +6,13 @@ var mouseX;
 var mouseY;
 var mouseInput;
 var slideNum = 0;
+var slideContent = ["1st content", "2nd content"];
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 c.scale(scale, scale);
 c.font = '50px Arial';
 var cord1 = canvas.width / 3;
 var cord2 = cord1 + cord1;
-c.fillRect(cord1, 200, 20, 20);
-c.fillRect(cord2, 200, 20, 20);
 
 document.addEventListener('mousemove', e => {
 mouseX = e.screenX;
@@ -50,7 +49,7 @@ function draw(){
     c.font = '50px Arial';
     c.fillText("Title", 20, 20);
     c.font = '25px Arial';
-    c.fillText(slideNum, 20, 50);
+    c.fillText(slideContent[slideNum], 20, 50);
 }
 
 draw();

@@ -26,10 +26,6 @@ mouseInput = e.returnValue;
 function draw(){
     requestAnimationFrame(draw);
     c.clearRect(0, 0, canvas.width, canvas.height);
-    c.font = '50px Arial';
-    c.fillText("Title", 20, 20);
-    c.font = '25px Arial';
-    c.fillText(slideContent[slideNum], 20, 50);
     if (Math.abs(mouseX) < cord1 && mouseInput){
         c.fillText("Left", canvas.width / 2, 200);
         if (slideNum == 0){
@@ -53,10 +49,18 @@ function draw(){
     if (slideNum == 1){
         c.fillStyle = "green";
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
+        c.font = '50px Arial';
+        c.fillText("Title", 20, 20);
+        c.font = '25px Arial';
+        c.fillText(slideContent[slideNum], 20, 50);
     }
     if (slideNum == 0){
         c.fillStyle = "pink";
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
+        c.font = '50px Arial';
+        c.fillText("Title", 20, 20);
+        c.font = '25px Arial';
+        c.fillText(slideContent[slideNum], 20, 50);
     }
     if (mouseInput){
         mouseInput = false;

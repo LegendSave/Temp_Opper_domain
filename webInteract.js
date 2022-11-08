@@ -46,6 +46,14 @@ function draw(){
         }
         mouseInput = false;
     }
+    if (slideNum == 1){
+        c.fillStyle = "green";
+        c.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    }
+    if (slideNum == 0){
+        c.fillStyle = "pink";
+        c.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    }
     c.font = '50px Arial';
     c.fillText("Title", 20, 20);
     c.font = '25px Arial';

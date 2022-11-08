@@ -54,6 +54,9 @@ function draw(){
         c.fillStyle = "pink";
         c.fillRect(0, 0, window.innerWidth, window.innerHeight);
     }
+    if (mouseInput){
+        mouseInput = false;
+    }
     c.font = '50px Arial';
     c.fillText("Title", 20, 20);
     c.font = '25px Arial';

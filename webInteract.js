@@ -55,9 +55,6 @@ function link(text, x, y, fontSize, colorValue, url) {
         c.fillStyle = assetColorValue[colorNumeric];
         c.strokeStyle = assetColorValue[colorNumeric];
     }
-    else{
-        alert("Incorrect Value given. Parameters: 0, 1, 2, 3, 4, 5, 6, 7");
-    }
 
     let textLength = c.measureText(text).width;
     let height = (y + fontSize) - 20;
@@ -134,7 +131,7 @@ function draw() {
         c.font = '25px Times New Roman';
         c.fillText(slideContent[slideNum], 20, dblSpc(20, 25));
         //Edit code before checking if link works.
-        link("Random url", 20, dblSpc(dblSpc(20, 25), 25), 25, "blue");
+        link("Random url", 20, dblSpc(dblSpc(20, 25), 25), 25, 4);
         c.shadowColor = "black";
         c.shadowBlur = 10;
         c.shadowOffsetX = 10;

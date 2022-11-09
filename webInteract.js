@@ -71,8 +71,13 @@ function draw(){
     c.shadowBlur = 5;
     c.shadowOffsetX = -5;
     c.shadowOffsetY = -5;
-    if (Math.abs(mouseX) < cord1 && mouseInput || keyInput == 37){
+    if (Math.abs(mouseX) < cord1 && mouseInput){
         c.fillText("Left", canvas.width / 2, 200);
+        if (slideNum == 0){
+            slideNum = 0;
+        }
+        else if(keyInput == 37){
+            c.fillText("Left", canvas.width / 2, 200);
         if (slideNum == 0){
             slideNum = 0;
         }
@@ -81,10 +86,16 @@ function draw(){
         }
         mouseInput = false;
     }
-    if (Math.abs(mouseX) > cord2 && mouseInput || keyInput == 39){
+    if (Math.abs(mouseX) > cord2 && mouseInput){
         c.fillText("Right", canvas.width / 2, 200);
         if(slideNum == 1){
             slideNum = 1;
+        }
+        else if(keyInput == 39){
+            c.fillText("Right", canvas.width / 2, 200);
+        if(slideNum == 1){
+            slideNum = 1;
+        }
         }
         else{
             slideNum += 1;

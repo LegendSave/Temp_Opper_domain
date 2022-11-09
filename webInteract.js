@@ -76,7 +76,7 @@ function draw() {
         if (slideNum == 0) {
             slideNum = 0;
         }
-
+    }
         if (keyInput == 37) {
             c.fillText("Left", canvas.width / 2, 200);
             if (slideNum == 0) {

@@ -10,6 +10,8 @@ var slideNum = 0;
 var slideContent = ["1st content", "2nd content"];
 var slideImages = [document.getElementById("img1"), document.getElementById("img2")];
 var textValue;
+//Starts at numeric value 0;
+var assetColorValue = ["red", "orange", "yellow", "green", "blue", "purple", "white", "black"];
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 c.scale(scale, scale);
@@ -40,21 +42,28 @@ function dblSpc(startText, fontSize) {
 }
 
 //Generates a link for the user to click on, Used for works sited.
-function link(text, x, y, fontSize, color, url) {
+function link(text, x, y, fontSize, colorValue, url) {
+    //refer to color assets for number clarification
     this.text = text;
     this.x = x;
     this.y = y;
     this.fontSize = fontSize;
-    this.color = color;
+    this.colorValue = colorNumeric;
     this.url = url;
+
+    if (colorNumeric != 0 || 1 || 2 || 3 || 4 || 5 || 6 || 7){
+        c.fillStyle = assetColorValue[colorNumeric];
+        c.strokeStyle = assetColorValue[colorNumeric];
+    }
+    else{
+        alert("Incorrect Value given. Parameters: 0, 1, 2, 3, 4, 5, 6, 7");
+    }
 
     let textLength = c.measureText(text).width;
     let height = (y + fontSize) - 20;
     let fontSz = `${fontSize}` + 'px';
     c.beginPath();
     c.font = `${fontSz} Times New Roman`;
-    c.fillStyle = color;
-    c.strokeStyle = color;
     c.fillText(text, x, y);
     c.moveTo(x, height);
     c.lineTo(x + textLength, height);

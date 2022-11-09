@@ -10,8 +10,6 @@ var slideNum = 0;
 var slideContent = ["1st content", "2nd content"];
 var slideImages = [document.getElementById("img1"), document.getElementById("img2")];
 var textValue;
-//Starts at numeric value 0;
-var assetColorValue = ["red", "orange", "yellow", "green", "blue", "purple", "white", "black"];
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 c.scale(scale, scale);
@@ -42,24 +40,21 @@ function dblSpc(startText, fontSize) {
 }
 
 //Generates a link for the user to click on, Used for works sited.
-function link(text, x, y, fontSize, colorValue, url) {
+function link(text, x, y, fontSize, colorString, url) {
     //refer to color assets for number clarification
     this.text = text;
     this.x = x;
     this.y = y;
     this.fontSize = fontSize;
-    this.colorValue = colorNumeric;
+    this.colorString = colorString;
     this.url = url;
-
-    if (colorNumeric === 0 || 1 || 2 || 3 || 4 || 5 || 6 || 7){
-        c.fillStyle = assetColorValue[colorNumeric];
-        c.strokeStyle = assetColorValue[colorNumeric];
-    }
 
     let textLength = c.measureText(text).width;
     let height = (y + fontSize) - 20;
     let fontSz = `${fontSize}` + 'px';
     c.beginPath();
+    c.fillStyle = colorString;
+    c.strokeStyle = colorString;
     c.font = `${fontSz} Times New Roman`;
     c.fillText(text, x, y);
     c.moveTo(x, height);
@@ -131,7 +126,7 @@ function draw() {
         c.font = '25px Times New Roman';
         c.fillText(slideContent[slideNum], 20, dblSpc(20, 25));
         //Edit code before checking if link works.
-        link("Random url", 20, dblSpc(dblSpc(20, 25), 25), 25, 4);
+        link("Random url", 20, dblSpc(dblSpc(20, 25), 25), 25, "blue");
         c.shadowColor = "black";
         c.shadowBlur = 10;
         c.shadowOffsetX = 10;

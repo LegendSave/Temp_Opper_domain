@@ -1,7 +1,7 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 window.devicePixelRatio = 1;
-var scale = window.devicePixelRatio; 
+var scale = window.devicePixelRatio;
 var mouseX;
 var mouseY;
 var mouseInput;
@@ -18,16 +18,16 @@ var cord1 = canvas.width / 3;
 var cord2 = cord1 + cord1;
 
 document.addEventListener('mousemove', e => {
-mouseX = e.screenX;
-mouseY = e.screenY;
+    mouseX = e.screenX;
+    mouseY = e.screenY;
 });
 
 document.addEventListener('mousedown', e => {
-mouseInput = e.returnValue;
+    mouseInput = e.returnValue;
 });
 
 document.addEventListener('keydown', e => {
-keyInput = e.keyCode;
+    keyInput = e.keyCode;
 });
 
 //Double spaces document, used for MLA format.
@@ -40,7 +40,7 @@ function dblSpc(startText, fontSize) {
 }
 
 //Generates a link for the user to click on, Used for works sited.
-function link(text, x, y, fontSize, color, url){
+function link(text, x, y, fontSize, color, url) {
     this.text = text;
     this.x = x;
     this.y = y;
@@ -62,70 +62,75 @@ function link(text, x, y, fontSize, color, url){
     c.fill();
 
     //Add conditionals to read mouse position relative to the text.
-} 
+}
 
-function draw(){
+function draw() {
     requestAnimationFrame(draw);
     c.clearRect(0, 0, canvas.width, canvas.height);
     c.shadowColor = "black";
     c.shadowBlur = 5;
     c.shadowOffsetX = -5;
     c.shadowOffsetY = -5;
-    if (Math.abs(mouseX) < cord1 && mouseInput){
+    if (Math.abs(mouseX) < cord1 && mouseInput) {
         c.fillText("Left", canvas.width / 2, 200);
-        if (slideNum == 0){
+        if (slideNum == 0) {
             slideNum = 0;
         }
-        else if(keyInput == 37){
+
+        if (keyInput == 37) {
             c.fillText("Left", canvas.width / 2, 200);
-        if (slideNum == 0){
-            slideNum = 0;
+            if (slideNum == 0) {
+                slideNum = 0;
+            }
+            else {
+                slideNum -= 1;
+            }
+            mouseInput = false;
         }
-        else{
-            slideNum -= 1;
-        }
-        mouseInput = false;
-    }
-    if (Math.abs(mouseX) > cord2 && mouseInput){
-        c.fillText("Right", canvas.width / 2, 200);
-        if(slideNum == 1){
-            slideNum = 1;
-        }
-        else if(keyInput == 39){
+        if (keyInput == 39) {
             c.fillText("Right", canvas.width / 2, 200);
-        if(slideNum == 1){
-            slideNum = 1;
+            if (slideNum == 1) {
+                slideNum = 1;
+            }
+            else {
+                slideNum += 1;
+            }
+            mouseInput = false;
         }
+        if (Math.abs(mouseX) > cord2 && mouseInput) {
+            c.fillText("Right", canvas.width / 2, 200);
+            if (slideNum == 1) {
+                slideNum = 1;
+            }
+            else {
+                slideNum += 1;
+            }
+            mouseInput = false;
         }
-        else{
-            slideNum += 1;
+        if (slideNum == 1) {
+            c.fillStyle = "green";
+            c.fillRect(0, 0, window.innerWidth, window.innerHeight);
         }
-        mouseInput = false;
-    }
-    if (slideNum == 1){
-        c.fillStyle = "green";
-        c.fillRect(0, 0, window.innerWidth, window.innerHeight);
-    }
-    if (slideNum == 0){
+        if (slideNum == 0) {
 
-        c.fillStyle = "pink";
-        c.fillRect(0, 0, window.innerWidth, window.innerHeight);
+            c.fillStyle = "pink";
+            c.fillRect(0, 0, window.innerWidth, window.innerHeight);
+        }
+        if (mouseInput) {
+            mouseInput = false;
+        }
+        c.fillStyle = "black";
+        c.font = '50px Times New Roman';
+        c.fillText("Title", 20, 20);
+        c.font = '25px Times New Roman';
+        c.fillText(slideContent[slideNum], 20, dblSpc(20, 25));
+        //Edit code before checking if link works.
+        link("Random url", 20, dblSpc(dblSpc(20, 25), 25), 25, "blue");
+        c.shadowColor = "black";
+        c.shadowBlur = 10;
+        c.shadowOffsetX = 10;
+        c.shadowOffsetY = 10;
+        //c.drawImage(slideImages[slideNum], 80, 80);
     }
-    if (mouseInput){
-        mouseInput = false;
-    }
-    c.fillStyle = "black";
-    c.font = '50px Times New Roman';
-    c.fillText("Title", 20, 20);
-    c.font = '25px Times New Roman';
-    c.fillText(slideContent[slideNum], 20, dblSpc(20, 25));
-    //Edit code before checking if link works.
-    link("Random url", 20, dblSpc(dblSpc(20, 25), 25), 25, "blue");
-    c.shadowColor = "black";
-    c.shadowBlur = 10;
-    c.shadowOffsetX = 10;
-    c.shadowOffsetY = 10;
-    //c.drawImage(slideImages[slideNum], 80, 80);
-}
 
-draw();
+    draw();

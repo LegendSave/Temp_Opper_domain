@@ -51,7 +51,7 @@ function link(text, x, y, fontSize, colorValue, url) {
     this.colorValue = colorNumeric;
     this.url = url;
 
-    if (colorNumeric != 0 || 1 || 2 || 3 || 4 || 5 || 6 || 7){
+    if (colorNumeric === 0 || 1 || 2 || 3 || 4 || 5 || 6 || 7){
         c.fillStyle = assetColorValue[colorNumeric];
         c.strokeStyle = assetColorValue[colorNumeric];
     }

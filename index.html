@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Oppertunities after Highschool</title>
-        <meta name="description" content="This is an html5 page that was written by a highschooler for a project.">
+        <meta name="description" content="This is an html5 page that was written
+            by a highschooler for a project.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet.css">
         <style>
@@ -14,6 +15,10 @@
             h1{
                 font-size: 3.5vmax;
             }
+            h3{
+                display: inline;
+                font-size: 1.75vmax;
+            }
             h5{
                 font-size: 1vmax
             }
@@ -22,28 +27,49 @@
     <body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;">
         <div id="fullscreenContent" style="color: white;">
             <h1 style="float: left">Title text (Display only)</h1>
-            <h5 style="position: absolute; top: 30%; left: 10%">Text embeded(Display only)</h5>
-            <canvas id="animated-screen">Browser requires reload/Out of date</canvas>
+            <h5 style="position: absolute; top: 30%; left: 10%">Text
+                embeded(Display only)</h5>
+                <div style="position: absolute; top: 35%; left: 70%; background-color: darkslategrey; width: 80vmax; height: 80vmax;">
+                </div>
+            <div style="position:absolute; top: 40%; left: 75%; background-color: darkslategray">
+                <h3 id="editableText"></h3>
+                <h3>Hello</h3>
         </div>
-        <button style="height: 60px; width: 60px;align-content:center;" onclick="fullScreen()"><img src="fullScreen.png" width="50px" height="50px" align="center"></button>
+            <canvas id="console" style="position: absolute; left: 70%; top: 60%; background-color: navy; " width="900" height="900">Browser requires reload/Out of date</canvas>
+        </div>
+        <button style="position: absolute; left: 90%; top: 90%;"
+            onclick="fullScreen()"><img src="fullScreen.png" width="50px"
+                height="50px" align="center"></button>
         <script src="webAssets.js" defer></script>
-        <script defer>
-            //Allows for spacing of events, in a number of seconds.
-            //i is the variable used to mean the tick the function is on.
-            //Default return value is 0.
-                let i = 1;
-            function draw(){
-               setTimeout(e => {
-                requestAnimationFrame(draw);
+        <script "Main" defer>
+            //Intialization
+            var firstTxtA = document.getElementById("editableText");
+            var canvas = document.getElementById("console");
+            var c = canvas.getContext("2d");
+            //Used for console.log() animation.
+            var firstStr = ["c|", "co|", "con|", "cons|", "conso|", "consol|", "console|", "console.|", "console.l|", "console.lo|", "console.log|", "console.log('|');", "console.log('H|');", "console.log('He|');","console.log('Hel|');", "console.log('Hell|');" , "console.log('Hello|');", "console.log('Hello');|", "console.log('Hello');"];
+                let i = 0;
+                let animationFrame;
+                function anim1(){
+               var timeout = setTimeout(e => {
+                animationFrame = requestAnimationFrame(anim1);
+                firstTxtA.innerText = firstStr[i];
                 i += 1;
-                console.log(i);
-               }, 5000);
+               }, 50);
+               if (i == firstStr.length){
+                    clearTimeout(timeout);
+                    cancelAnimationFrame(animationFrame);
+                    c.fillStyle = "white";
+                    c.font = "30px Arial";
+                    c.fillText("> Hello", 20, 20);
+                }
             };
-            draw();
+            anim1();
             </script>
         <div class="image-visibilty">
-        <img src="placeholder1.png" id="img1"/>
-        <img src="placeholder2.png" id="img2"/>
+            <img src="play.png" id="playImg"/>
+            <img src="placeholder1.png" id="img1"/>
+            <img src="placeholder2.png" id="img2"/>
         </div>
     </body>
 </html>

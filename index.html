@@ -39,7 +39,7 @@
     </style>
 </head>
 
-<body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;">
+<body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;" onload="instruction()">
     <div id="fullscreenContent" style="color: white;">
         <div id="animation" style="visibility:hidden">
             <div style="position: absolute; top: 35%; left: 70%;
@@ -193,6 +193,10 @@
                 index.style.visibility = "hidden";
                 var anim1Time = setTimeout(time => { anim1(); clearTimeout(anim1Time); }, 5000);
             }
+        }
+
+        function instruction(){
+            alert("Click on the right side of the Screen to change to next slide, to go back click on the left side of the Screen");
         }
     </script>
 </body>

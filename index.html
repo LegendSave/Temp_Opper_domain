@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +37,6 @@
         }
     </style>
 </head>
-
 <body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;" onload="instruction()">
     <div id="fullscreenContent" style="color: white;">
         <div id="animation" style="visibility:hidden">
@@ -88,7 +86,43 @@
             <li>No.</li>
         </div>
         </div>
+    <div id="jbdesgame" style="visibility: hidden;">
+        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+        Job Description: Game Development
+        </h1>
     </div>
+    <div id="jbdesweb" style="visibility: hidden">
+        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+        Job Description: Web Development
+        </h1>
+    </div>
+    <div id="jbdesapp" style="visibility: hidden">
+    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+    Job Description: App Development
+    </h1>
+    </div>
+    <div id="jbdesover" style="visibility: hidden;">
+    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+    Job Description: Overall Development
+    </h1>
+    </div>
+    <div id="rshout" style="visibility: hidden">
+    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+    Research Outcome
+    </h1>
+    </div>
+    <div id="wrkscite" style="visibility: hidden">
+    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+    Works Cited
+    </h1>
+    </div>
+    <div id="libib" style="visibility: hidden">
+        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+        Bibliography
+        </h1>
+    </div>
+
+
     <button style="position: absolute; left: .5%; top: 90%;" onclick="fullScreen()"><img src="fullScreen.png"
             width="50px" height="50px" align="center"></button>
     <div class="image-visibilty">
@@ -124,6 +158,13 @@
         //Requests div for formatting
         var titleSlide = document.getElementById("titleSlide");
         var index = document.getElementById("index");
+        var jbdesgame = document.getElementById("jbdesgame");
+        var jbdesweb = document.getElementById("jbdesweb");
+        var jbdesapp = document.getElementById("jbdesapp");
+        var jbdesover = document.getElementById("jbdesover");
+        var rshout = document.getElementById("rshout");
+        var wrkscite = document.getElementById("wrkscite");
+        var libib = document.getElementById("libib");
         var screenOrientation = (window.innerWidth / 3);
         function anim1() {
             var timeout = setTimeout(e => {
@@ -166,7 +207,11 @@
 
         function slideCheck() {
             if (mouseInput && mouseX > (screenOrientation + screenOrientation)) {
+                if (slideNum == 9){
+                    slideNum = 9
+                } else {
                 slideNum = slideNum + 1;
+                }
             }
             else if (mouseInput && mouseX < (window.innerWidth / 3)) {
                 if(slideNum == 0){
@@ -191,14 +236,50 @@
             if (slideNum == 2) {
                 animation.style.visibility = "visible";
                 index.style.visibility = "hidden";
+                jbdesgame.style.visibility = "hidden";
                 var anim1Time = setTimeout(time => { anim1(); clearTimeout(anim1Time); }, 5000);
+            }
+            if (slideNum == 3) {
+                jbdesgame.style.visibility = "visible";
+                animation.style.visibility = "hidden";
+                textInvis.style.visibility = "hidden";
+                jbdesweb.style.visibility = "hidden";
+            }
+            if (slideNum == 4){
+                jbdesgame.style.visibility = "hidden";
+                jbdesweb.style.visibility = "visible";
+                jbdesapp.style.visibility = "hidden";
+            }
+            if (slideNum == 5){
+                jbdesapp.style.visibility = "visible";
+                jbdesweb.style.visibility = "hidden";
+                jbdesover.style.visibility = "hidden";
+            }
+            if (slideNum == 6){
+                jbdesover.style.visibility = "visible";
+                jbdesapp.style.visibility = "hidden";
+                rshout.style.visibility = "hidden";
+            }
+            if (slideNum == 7){
+                jbdesover.style.visibility = "hidden";
+                rshout.style.visibility = "visible";
+                wrkscite.style.visibility = "hidden";
+            }
+            if (slideNum == 8){
+                rshout.style.visibility = "hidden";
+                wrkscite.style.visibility = "visible";
+                libib.style.visibility = "hidden";
+            } 
+            if (slideNum == 9){
+                wrkscite.style.visibility = "hidden";
+                libib.style.visibility = "visible";
             }
         }
 
         function instruction(){
+            //Only used for testing purposes, can be removed when not needed
             alert("Click on the right side of the Screen to change to next slide, to go back click on the left side of the Screen");
         }
     </script>
 </body>
-
 </html>

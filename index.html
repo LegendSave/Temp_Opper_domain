@@ -86,42 +86,42 @@
             <li>No.</li>
         </div>
         </div>
-    <div id="jbdesgame" style="visibility: hidden;">
+        </div>
+        <div id="jbdesgame" style="visibility: hidden;">
+            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            Job Description: Game Development
+            </h1>
+        </div>
+        <div id="jbdesweb" style="visibility: hidden">
+            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            Job Description: Web Development
+            </h1>
+        </div>
+        <div id="jbdesapp" style="visibility: hidden">
         <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Job Description: Game Development
+        Job Description: App Development
         </h1>
-    </div>
-    <div id="jbdesweb" style="visibility: hidden">
+        </div>
+        <div id="jbdesover" style="visibility: hidden;">
         <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Job Description: Web Development
+        Job Description: Overall Development
         </h1>
-    </div>
-    <div id="jbdesapp" style="visibility: hidden">
-    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-    Job Description: App Development
-    </h1>
-    </div>
-    <div id="jbdesover" style="visibility: hidden;">
-    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-    Job Description: Overall Development
-    </h1>
-    </div>
-    <div id="rshout" style="visibility: hidden">
-    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-    Research Outcome
-    </h1>
-    </div>
-    <div id="wrkscite" style="visibility: hidden">
-    <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-    Works Cited
-    </h1>
-    </div>
-    <div id="libib" style="visibility: hidden">
+        </div>
+        <div id="rshout" style="visibility: hidden">
         <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Bibliography
+        Research Outcome
         </h1>
-    </div>
-
+        </div>
+        <div id="wrkscite" style="visibility: hidden">
+        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+        Works Cited
+        </h1>
+        </div>
+        <div id="libib" style="visibility: hidden">
+            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            Bibliography
+            </h1>
+        </div>
 
     <button style="position: absolute; left: .5%; top: 90%;" onclick="fullScreen()"><img src="fullScreen.png"
             width="50px" height="50px" align="center"></button>
@@ -129,6 +129,7 @@
         <img src="play.png" id="playImg" />
         <img src="placeholder1.png" id="img1" />
         <img src="placeholder2.png" id="img2" />
+    </div>
     </div>
     <script "Main" defer>
         //Intialization
@@ -242,7 +243,7 @@
             if (slideNum == 3) {
                 jbdesgame.style.visibility = "visible";
                 animation.style.visibility = "hidden";
-                textInvis.style.visibility = "hidden";
+                txtInvis.style.visibility = "hidden";
                 jbdesweb.style.visibility = "hidden";
             }
             if (slideNum == 4){

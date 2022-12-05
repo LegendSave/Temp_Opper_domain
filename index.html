@@ -28,12 +28,9 @@
         h5 {
             font-size: 1vmax
         }
-
-        li {
-            font-size: 2.5vmax;
-        }
-        ol{
-            font-size: 1.5vmax;
+        p{
+            font-size: 30px;
+            color: aliceblue;
         }
     </style>
 </head>
@@ -66,12 +63,6 @@
         <div style="position:absolute; top: 15%; left: 15%">
             <!--Table of contents, text-->
             <li>Job Description</li>
-            <div style="padding-left: 5vmax">
-            <ol>Overall</ol>
-            <ol>Game Development</ol>
-            <ol>Web Development</ol>
-            <ol>App Development</ol>
-            </div>
             <li>Requirments</li>
             <li>Research Outcome</li>
             <li>Works Cited</li>
@@ -79,7 +70,6 @@
         </div>
         <div style="position:absolute; top:15%; left: 70%">
             <li>No.</li>
-            <div style="margin-top: 14.5vmax;">
             <li>No.</li>
             <li>No.</li>
             <li>No.</li>
@@ -87,25 +77,24 @@
         </div>
         </div>
         </div>
-        <div id="jbdesgame" style="visibility: hidden;">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-            Job Description: Game Development
-            </h1>
-        </div>
-        <div id="jbdesweb" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-            Job Description: Web Development
-            </h1>
-        </div>
-        <div id="jbdesapp" style="visibility: hidden">
+        <div id="jbdes" style="visibility: hidden">
         <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Job Description: App Development
+        Job Description
         </h1>
+        <p>
+            In computer engineering, a person will write out lines of code within a "langauge". A computer language is computed down to an integer value of 1 and 0. Computer engineers don't only work with software(code), but also with the hardware(computer's processors, cores, ect...). Having a knowledge of how computers read information given to them allows for the process to display the images on the screen. This works together with the display to create an interface.
+        </p>
         </div>
-        <div id="jbdesover" style="visibility: hidden;">
-        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Job Description: Overall Development
-        </h1>
+        <div id="duties1" style="visibility: hidden">
+            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            Duties
+            </h1>
+            <p>As mentioned before a computer engineer understands how computers compute data to create an interface. However it is not as simple as just that. Hardware developers also know about internet limitation due to current transfer limit. Not to mention there are multiple fields all broken up to manage a certian process. Split up into 3 catagories:
+                Software, Hardware, Internet.
+            </p>
+        </div>
+        <div id="duties2" style="visibility: hidden">
+        <!--Part 2-->
         </div>
         <div id="rshout" style="visibility: hidden">
         <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
@@ -148,6 +137,7 @@
         var playObject = document.getElementById("playImg");
         var fullscreenContent = document.getElementById("fullscreenContent");
         var button = document.querySelector('button');
+        var jbdes = document.getElementById("jbdes");
         var mouseX;
         var mouseY;
         var mouseInput;
@@ -159,10 +149,6 @@
         //Requests div for formatting
         var titleSlide = document.getElementById("titleSlide");
         var index = document.getElementById("index");
-        var jbdesgame = document.getElementById("jbdesgame");
-        var jbdesweb = document.getElementById("jbdesweb");
-        var jbdesapp = document.getElementById("jbdesapp");
-        var jbdesover = document.getElementById("jbdesover");
         var rshout = document.getElementById("rshout");
         var wrkscite = document.getElementById("wrkscite");
         var libib = document.getElementById("libib");
@@ -231,38 +217,31 @@
                 index.style.visibility = 'visible';
                 animation.style.visibility = 'hidden';
                 txtInvis.style.visibility = 'hidden';
+                jbdes.style.visibility = 'hidden';
                 c.clearRect(0, 0, canvas.width, canvas.height);
                 i = 0;
             }
             if (slideNum == 2) {
                 animation.style.visibility = "visible";
                 index.style.visibility = "hidden";
-                jbdesgame.style.visibility = "hidden";
+                jbdes.style.visibility = "visible";
                 var anim1Time = setTimeout(time => { anim1(); clearTimeout(anim1Time); }, 5000);
             }
             if (slideNum == 3) {
-                jbdesgame.style.visibility = "visible";
+                jbdes.style.visibility = "hidden";
                 animation.style.visibility = "hidden";
                 txtInvis.style.visibility = "hidden";
-                jbdesweb.style.visibility = "hidden";
             }
             if (slideNum == 4){
-                jbdesgame.style.visibility = "hidden";
-                jbdesweb.style.visibility = "visible";
-                jbdesapp.style.visibility = "hidden";
+
             }
             if (slideNum == 5){
-                jbdesapp.style.visibility = "visible";
-                jbdesweb.style.visibility = "hidden";
-                jbdesover.style.visibility = "hidden";
+               
             }
             if (slideNum == 6){
-                jbdesover.style.visibility = "visible";
-                jbdesapp.style.visibility = "hidden";
                 rshout.style.visibility = "hidden";
             }
             if (slideNum == 7){
-                jbdesover.style.visibility = "hidden";
                 rshout.style.visibility = "visible";
                 wrkscite.style.visibility = "hidden";
             }

@@ -27,7 +27,7 @@
         h5 {
             font-size: 1vmax
         }
-        p{
+        li{
             font-size: 30px;
             color: aliceblue;
             max-width: 45%;
@@ -83,6 +83,11 @@
             <li>No.</li>
             <li>No.</li>
         </div>
+        cc</div>
+        <div style="visibility: hidden">
+            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+                Job Description
+                </h1>
         </div>
         <div id="jbdes" style="visibility: hidden">
         <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
@@ -126,19 +131,15 @@
         </div>
         <div id="edtrreq1" style="visibility: hidden">
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-                Education/Training requirements
+                Education/Training Requirements
                 </h1>
-                <p>
-                    A bachelors degree in computer engineering or other simular subjects is required. Usually required for people take courses in computer languages, such as Java, C++, or Objective-C. 
-                </p>
+                    <li>A bachelors degree in computer engineering or other simular subjects is required.</li><li> Usually required for people take courses in computer languages, such as Java, C++, or Objective-C.</li>
         </div>
         <div id="edtrreq2" style="visibility: hidden">
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-                Education/Training requirements continued...
+                Education/Training Requirments Analysis
                 </h1>
-                <p>
-                 I am motivated to meet the cricumstances, as I already love programming, and the challenge that it would give me would honestly be fun. However, it may be a bit to simple...    
-                </p>
+                <li> I am motivated to meet the cricumstances, as I already love programming </li><li>Challenges that come from it would give me fun. However, it may be a bit to simple...</li>    
         </div>
         <div id="bstschl" style="visibility:hidden">
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
@@ -261,6 +262,13 @@
             resources[slideNum].style.visibility = "visible";
             resources[slideNum - 1].style.visibility = "hidden";
             resources[slideNum + 1].style.visibility = "hidden";
+
+            if (slideNum  == 2){
+                animation.style.visibility = "visible";
+            }
+            else {
+                animation.style.visibility = "hidden";
+            }
         }
         function instruction(){
             //Only used for testing purposes, can be removed when not needed

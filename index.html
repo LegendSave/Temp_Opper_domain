@@ -35,9 +35,9 @@
             top: 30%;
             left: 10%;
         }
-        img{
-            max-width: 40%;
-            max-height: 45%;
+        .clgimg{
+            max-width: 20%;
+            max-height: 20%;
         }
         .li-lis{
             font-size: 30px;
@@ -50,14 +50,32 @@
         .cited{
             font-size: 30px;
             color: aliceblue;
-            max-width: 45%;
+            max-width: 80%;
             position: absolute;
             top: 30%;
             left: 10%;
         }
+        .spacing{
+            padding-left: .5in;
+            font-size: 30px;
+            color: aliceblue;
+            max-width: 80%;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+        }
+        a:visited{
+            visibility: hidden;
+        }
+        a:hover{
+            color: darkslategray;
+        }
+        a{
+            color: gray;
+        }
     </style>
 </head>
-<body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;" onload="instruction()">
+<body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;" onload="notif()">
     <div id="fullscreenContent" style="color: white;">
         <div id="animation" style="visibility:hidden">
             <div style="position: absolute; top: 35%; left: 70%;
@@ -78,26 +96,40 @@
                 background-color: grey; " width="900" height="900">Browser
                 requires reload/Out of date</canvas>
         </div>
-        <div id="titleSlide">
+        <div id="titleSlide" style="position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;">
             <h1>Computer Engineering</h1>
+            <img style="width: 87%; height: 97%; position: absolute; top: 30%; left: 5%;" src="codewind.png"/>
         </div>
         <div id="index" style="visibility: hidden; position:absolute;top: 0%; left: 0%; width: 100%; height: 100%; background-image:url(codingimg.jpg); background-repeat: no-repeat;background-size:100% 100%;">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">Table of Contents</h1>
-        <div style="position:absolute; top: 15%; left: 15%">
+            <h1 style=" position: absolute; top: 5%; left: 40%; margin: 0px">Table of Contents</h1>
+        <div style="position:absolute; top: 15%; left: 15%; font-size: 30px">
             <!--Table of contents, text-->
             <li>Job Description</li>
             <li>Duties</li>
             <li>Requirments</li>
+            <li>Skills/Qualities</li>
+            <li>Education/Training Requirements</li>
+            <li>Best Schools</li>
+            <li>Salary</li>
+            <li>Projected Growth</li>
+            <li>Overall Benefit to Self and Others</li>
             <li>Research Outcome</li>
             <li>Works Cited</li>
             <li>Bibliography</li>
         </div>
-        <div style="position:absolute; top:15%; left: 70%">
-            <li>No.</li>
-            <li>No.</li>
-            <li>No.</li>
-            <li>No.</li>
-            <li>No.</li>
+        <div style="position:absolute; top:15%; left: 70%; font-size: 30px">
+            <li>3</li>
+            <li>4-5</li>
+            <li>6-7</li>
+            <li>8-9</li>
+            <li>10-11</li>
+            <li>12-13</li>
+            <li>14-15</li>
+            <li>16-17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
         </div>
         </div>
         <div style="visibility: hidden">
@@ -117,6 +149,7 @@
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
             Duties
             </h1>
+            <img src="Screenshot 2022-12-07 225302.png" style="position: absolute; right: 5.5%; top: 30%; max-width: 40%; max-height: 40%;">
             <div class="li-lis" style="position: absolute; top: 15%; left: 10%;">
                 <li>Computer Engineering has multiple different fields, so every job requires a different set of knowledge.</li><li> System computing is for backend programming, which allows for information to be stored, edited, and pushed to be able to create a visual effect on the display.</li><li> Frontend programming is designed to create a nicer enviorment for the user to be able to understand. This is used in video games and web development, however, it is normally used less than backend programming.</li><li>Programming is about a lot of problem solving in a certain period of time.</li>
         </div>
@@ -133,6 +166,7 @@
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Skill/Qualities
                 </h1>
+                <img src="High-Level-Solution-for-Twitter-System-Design.png"style="max-width: 40%; max-height: 40%; position: absolute; top: 20%; right: 4%">
                 <div class="li-lis" style="position: absolute; top: 15%; left: 10%;">
                     <li>There are a couple different skills that you need to become a computer engineer. You need critical thinking to be able to identify the problem and use reasoning to be able to solve the problem.</li><li> Active listening is also needed as you need to be able to listen to what the company/employer wants.</li><li> You also need to be able to understand the system to create a correct program to have top preformance.</li>
         </div>
@@ -149,6 +183,10 @@
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Education/Training Requirements
                 </h1>
+                <img src="https://thumbs.dreamstime.com/b/graduate-cap-diploma-education-vintage-set-hand-drawn-vector-illustration-realistic-sketch-graduate-cap-diploma-education-156080146.jpg" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 10%;">
+                <img src="https://www.pngkey.com/png/full/264-2646582_logo-transparent-background-java.png" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 40%;">
+                <img src="https://assets-global.website-files.com/6047a9e35e5dc54ac86ddd90/63065002ce321b529d375e07_2e261bcd.png" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 75%;">
+                <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/objective-c/objective-c.png" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 53.5%; left: 75%;">
                <div class="li-lis">
                 <li>A bachelors degree in computer engineering or other simular subjects is required.</li><li> Usually required for people take courses in computer languages, such as Java, C++, or Objective-C.</li>
             </div>
@@ -165,9 +203,17 @@
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Best Schools
                 </h1>
-                <img src="miot.png" alt="Massachusetts Institute of Technology"/>
-                <img src="https://pbs.twimg.com/profile_images/875395483128049664/8z_jvdLB_400x400.jpg" alt="Stanford University"/>
-                <div id="li-lis">
+                <img class="clgimg" style="position: absolute; right: 10%;top: 10%" src="miot.png" alt="Massachusetts Institute of Technology"/>
+                <img class="clgimg" style="position: absolute; right: 10%;top: 40%" src="https://pbs.twimg.com/profile_images/875395483128049664/8z_jvdLB_400x400.jpg" alt="Stanford University"/>
+                <img class="clgimg" style="position: absolute; right: 10%;top: 70%" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" alt="Carnegie Mellon University">
+                <img class="clgimg" style="position: absolute; right: 40%;top: 70%" src="https://marketing.illinois.edu/wp-content/uploads/2021/09/logo-internal-collaboration-1024x423.png" alt="University of Illinois Urbana-Champaign">
+                <img class="clgimg" style="position: absolute; right: 70%;top: 70%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="University of California, Berkeley">
+                <div style="            font-size: 30px;
+                color: aliceblue;
+                max-width: 45%;
+                position: absolute;
+                top: 30%;
+                left: 10%;">
                 <li>Massachusetts Institute of Technology: #1 In computer engineering</li><li>Stanford University/University of California, Berkeley: #2 In computer engineering</li><li>Carnegie Mellon University/University of Illinois Urbana-Champaign: #4 in computer engineering</li>
                 </div>
             </div>
@@ -183,6 +229,7 @@
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Salary
                 </h1>
+                <img src="https://media.istockphoto.com/id/182685777/photo/golden-dollar-sign.jpg?s=612x612&w=0&k=20&c=Drmh2WnpzKWh30Gbl8RgdnminU0MZHR0kEE1Q9CVMRM=" style="width: 40%; height: 70%; position: absolute; top: 15%; right: 10%;">
                 <div class="li-lis">
                     <li>Lower annual wage: $70,000</li>
                     <li>Median annual wage: $121,000</li>
@@ -201,6 +248,7 @@
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Projected Growth
             </h1>
+            <img src="https://img.freepik.com/free-vector/red-arrow-going-up-with-bar-chart_1308-110320.jpg?w=2000" style="width: 40%; height: 40%; position: absolute; bottom: 3.5%; right: 5%;">
             <div class="li-lis">
                 <ol>The job oppertunties are estimated to increase by 25% by 2031, due to the tech industry growing exponentialy(Software Developers, Quality assurance analysists and testers).</ol>
             </div>
@@ -217,6 +265,7 @@
             <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Overall Benefit to Self and Others
             </h1>
+            <img src="https://media.istockphoto.com/id/503451933/photo/green-checkmark.jpg?s=612x612&w=0&k=20&c=own8caimCiRrUqYsfusNdY3vaizeSm9h4Ar4oXCi1-0=" style="width: 40%; height: 50%; position: absolute; bottom: 3.5%; right: 3.5%;">
             <div class="li-lis">
                 <li>As a computer engineer you can help other people make calculations, write, and even do automations.</li><li>Even if most programs people think of are video games, many other things, anything on the computer, was made by programmers.</li><li>It let people call for help, allowed for people to meet eachother all across the globe.</li><li>Technology is something that everyone relies on nowadays.</li>
             </div>
@@ -234,7 +283,7 @@
         Works Cited
         </h1>
         <div class="cited">
-            <li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook. U.S. Bureau of Labor Statistics, United States Department of Labor, 09 Sept. 2022, www.bls.gov. Accessed 15 Nov. 2022.</li>
+            <display-inside style="display: inline;"><li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook. U.S. Bureau of Labor <div style="padding-left: 1.5in">Statistics, United States Department of Labor, 09 Sept. 2022, <a href="https://www.bls.gov">www.bls.gov</a>. Accessed 15 Nov. 2022.</div></li></display-inside>
         </div>
         </div>
         <div id="libib" style="visibility: hidden">
@@ -242,27 +291,30 @@
             Bibliography
             </h1>
             <div class="cited">
-                <li>“Computer System Engineers/Architect.” California Career Zone. California Career Resource Network, 2022, www.cacareerzone.org. Accessed 15 Nov. 2022.
-                </li>
+                <display-inside style="display: inline"><li>“Computer System Engineers/Architect.” California Career Zone. California Career Resource Network, 2022, <a style="padding-left: 1.5in" href="https://www.cacareerzone.org">www.cacareerzone.org</a>. Accessed 15 Nov. 2022.
+                </li></display-inside>
                 <li>Harvey, Janet. Makerspace Careers: Careers in Interactive Media. Rosen Publishing, 2020, pp. 40-41.
                 </li>
-                <li>“Programmers and Developers.” Today U+0060 s Military. The Department of Defense, 2022, www.todaysmilitary.com. Accessed 15 Nov. 2022.
+                <display-inside style="display: inline">
+                <li>“Programmers and Developers.” Today's Military. The Department of Defense, 2022, <a href="https://www.todaysmilitary.com">www.todaysmilitary.com</a>. <div style="padding-left: 1.5in">Accessed 15 Nov. 2022.</div>
+                </li></display-inside>
+                <li>“Software Developers.” My Next Move. O-net, 18 Oct. 2022, <a href="https://www.mynextmove.org">www.mynextmove.org</a>. Accessed 17 Nov. 2022.
                 </li>
-                <li>“Software Developers.” My Next Move. O-net, 18 Oct. 2022, www.mynextmove.org. Accessed 17 Nov. 2022.
-                </li>
-                <li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook. U.S. Bureau of Labor Statistics, United States Department of Labor, 09 Sept. 2022, www.bls.gov. Accessed 15 Nov. 2022.
-                </li>
+                <display-inside style="display: inline">
+                <li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook. <div style="padding-left: 1.5in">U.S. Bureau of Labor Statistics, United States Department of Labor, 09 Sept. 2022, <a href="https://www.bls.gov">www.bls.gov</a>. Accessed 15 Nov. 2022.</div>
+                </li></display-inside>
                 <li>Streissguth, Tom. Great Jobs: Great Jobs in Technology. Reference Point Press, 2019, pp. 32-45.
                 </li>
             </div>
         </div>
-    </div>
-    <button style="position: absolute; left: .5%; top: 90%;" onclick="fullScreen()"><img src="fullScreen.png"
+        <button id="button" style="position: absolute; left: .5%; top: 90%;" onclick="fullScreen()"><img src="fullScreen.png"
             style="min-width: 15px; min-height: 15px; max-width: 50px; max-height: 50px;" align="center"></button>
+    </div>
     <div class="image-visibilty" style="visibility: hidden">
         <img src="play.png" id="playImg" />
         <img src="placeholder1.png" id="img1" />
         <img src="placeholder2.png" id="img2" />
+
     </div>
     </div>
     <script "Main" defer>
@@ -276,12 +328,14 @@
         var firstTxtD = document.getElementById("editableTextNo4");
         var firstTxtE = document.getElementById("editableTextNo5");
         var firstTxtF = document.getElementById("editableTextNo6");
+        var video = document.getElementById("video");
         //Other components for document
         var canvas = document.getElementById("console");
         var c = canvas.getContext('2d');
         var playObject = document.getElementById("playImg");
         var fullscreenContent = document.getElementById("fullscreenContent");
-        var button = document.querySelector('button');
+        var button = document.getElementById('button');
+        var button2 = document.getElementById("button2");
         var jbdes = document.getElementById("jbdes");
         var mouseX;
         var mouseY;
@@ -313,12 +367,9 @@
                 c.fillText("> Hello", 20, 70);
             }
         };
-
         function fullScreen() {
             fullscreenContent.requestFullscreen();
-            button.style.display = 'none';
         }
-
         //Interaction logic
         document.addEventListener("mousedown", e => {
             mouseInput = true;
@@ -332,7 +383,7 @@
             mouseX = event.screenX;
             mouseY = event.screenY;
         });
-
+        let wait;
         function slideCheck() {
             if (mouseInput && mouseX > (screenOrientation + screenOrientation)) {
                 if (slideNum == resources.length){
@@ -354,15 +405,27 @@
             resources[slideNum + 1].style.visibility = "hidden";
 
             if (slideNum  == 2){
+                wait = setTimeout(e => {anim1(); clearTimeout(wait)}, 5000);
                 animation.style.visibility = "visible";
+                txtInvis.style.visibility = "visible";
             }
             else {
                 animation.style.visibility = "hidden";
+                txtInvis.style.visibility = "hidden";
+                firstTxtA.innerText = "";
+                firstTxtB.innerText = "";
+                firstTxtC.innerText = "";
+                firstTxtD.innerText = "";
+                firstTxtE.innerText = "";
+                firstTxtF.innerText = "";
+                clearTimeout(wait);
+                c.clearRect(0, 0, canvas.width, canvas.height);
+                i = 0;
             }
         }
-        function instruction(){
-            //Only used for testing purposes, can be removed when not needed
-            alert("Click on the right side of the Screen to change to next slide, to go back click on the left side of the Screen");
+
+        function notif(){
+            alert("Due to content designed for full screen only, leave document in fullscreen entire time while viewing the content. Failure to do so will cause the text to mis-align. To exit fullscreen press 'esc' or 'F11'");
         }
     </script>
 </body>

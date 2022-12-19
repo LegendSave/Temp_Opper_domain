@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +28,8 @@
         h5 {
             font-size: 1vmax
         }
-        p{
+
+        p {
             font-size: 30px;
             color: aliceblue;
             max-width: 45%;
@@ -35,19 +37,22 @@
             top: 30%;
             left: 10%;
         }
-        .clgimg{
+
+        .clgimg {
             max-width: 20%;
             max-height: 20%;
         }
-        .li-lis{
+
+        .li-lis {
             font-size: 30px;
             color: aliceblue;
             max-width: 45%;
             position: absolute;
-            top: 30%;
+            top: 15%;
             left: 10%;
         }
-        .cited{
+
+        .cited {
             font-size: 30px;
             color: aliceblue;
             max-width: 80%;
@@ -55,7 +60,8 @@
             top: 30%;
             left: 10%;
         }
-        .spacing{
+
+        .spacing {
             padding-left: .5in;
             font-size: 30px;
             color: aliceblue;
@@ -64,26 +70,30 @@
             top: 30%;
             left: 10%;
         }
-        a:visited{
+
+        a:visited {
             visibility: hidden;
         }
-        a:hover{
+
+        a:hover {
             color: darkslategray;
         }
-        a{
+
+        a {
             color: gray;
         }
     </style>
 </head>
-<body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;" onload="notif()">
+
+<body style="margin-left: 10px; overflow-x: hidden; overflow-y: hidden;">
     <div id="fullscreenContent" style="color: white;">
         <div id="animation" style="visibility:hidden">
             <div style="position: absolute; top: 35%; left: 70%;
                 background-color: darkslategrey; width: 80vmax; height:
                 80vmax;">
             </div>
-            <div id="specialAnim"style="position:absolute; top: 40%; left: 75%;
-                background-color: darkslategray; visiblity: hidden">
+            <div id="specialAnim" style="position:absolute; top: 40%; left: 75%;
+                background-color: darkslategray; visibility: hidden">
                 <!--Animation components-->
                 <h3 id="editableTextNo1" style="color: skyblue"></h3>
                 <h3 id="editableTextNo2" style="color: yellow"></h3>
@@ -98,217 +108,335 @@
         </div>
         <div id="titleSlide" style="position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;">
             <h1>Computer Engineering</h1>
-            <img style="width: 87%; height: 97%; position: absolute; top: 30%; left: 5%;" src="codewind.png"/>
+            <img style="width: 87%; height: 97%; position: absolute; top: 30%; left: 5%;" src="codewind.png" />
         </div>
-        <div id="index" style="visibility: hidden; position:absolute;top: 0%; left: 0%; width: 100%; height: 100%; background-image:url(codingimg.jpg); background-repeat: no-repeat;background-size:100% 100%;">
+        <div id="index"
+            style="visibility: hidden; position:absolute;top: 0%; left: 0%; width: 100%; height: 100%; background-image:url(codingimg.jpg); background-repeat: no-repeat;background-size:100% 100%;">
             <h1 style=" position: absolute; top: 5%; left: 40%; margin: 0px">Table of Contents</h1>
-        <div style="position:absolute; top: 15%; left: 15%; font-size: 30px">
-            <!--Table of contents, text-->
-            <li>Job Description</li>
-            <li>Duties</li>
-            <li>Requirments</li>
-            <li>Skills/Qualities</li>
-            <li>Education/Training Requirements</li>
-            <li>Best Schools</li>
-            <li>Salary</li>
-            <li>Projected Growth</li>
-            <li>Overall Benefit to Self and Others</li>
-            <li>Research Outcome</li>
-            <li>Works Cited</li>
-            <li>Bibliography</li>
-        </div>
-        <div style="position:absolute; top:15%; left: 70%; font-size: 30px">
-            <li>3</li>
-            <li>4-5</li>
-            <li>6-7</li>
-            <li>8-9</li>
-            <li>10-11</li>
-            <li>12-13</li>
-            <li>14-15</li>
-            <li>16-17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-        </div>
+            <div style="position:absolute; top: 15%; left: 15%; font-size: 30px">
+                <!--Table of contents, text-->
+                <li>Job Description</li>
+                <li>Duties</li>
+                <li>Requirments</li>
+                <li>Skills/Qualities</li>
+                <li>Education/Training Requirements</li>
+                <li>Best Schools</li>
+                <li>Salary</li>
+                <li>Projected Growth</li>
+                <li>Overall Benefit to Self and Others</li>
+                <li>Research Outcome</li>
+                <li>Works Cited</li>
+                <li>Bibliography</li>
+            </div>
+            <div style="position:absolute; top:15%; left: 70%; font-size: 30px">
+                <li>3</li>
+                <li>4-5</li>
+                <li>6-7</li>
+                <li>8-9</li>
+                <li>10-11</li>
+                <li>12-13</li>
+                <li>14-15</li>
+                <li>16-17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+            </div>
         </div>
         <div style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Job Description
-                </h1>
+            </h1>
         </div>
         <div id="jbdes" style="visibility: hidden">
-        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Job Description
-        </h1>
-        <div class="li-lis">
-            <li>In computer engineering, a person will write out lines of code within a "langauge".</li><li> A computer language is computed down to an integer value of 1 and 0. Computer engineers don't only work with software(code), but also with the hardware(computer's processors, cores, ect...).</li><li> Having a knowledge of how computers read information given to them allows for the process to display the images on the screen, This works together with the display to create an interface.</li>
-        </div>
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+                Job Description
+            </h1>
+            <div class="li-lis">
+                <li>In computer engineering, a person will write out lines of code within a "langauge".</li>
+                <li> A computer language is computed down to an integer value of 1 and 0. Computer engineers don't only
+                    work with software(code), but also with the hardware(computer's processors, cores, ect...)("Computer System Engineers/Architects", California Career Zone).</li>
+                <li> Having a knowledge of how computers read information given to them allows for the process to
+                    display the images on the screen, This works together with the display to create an interface("Computer System Engineers/Architects", California Career Zone).</li>
+            </div>
         </div>
         <div id="duties1" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-            Duties
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+                Duties
             </h1>
-            <img src="Screenshot 2022-12-07 225302.png" style="position: absolute; right: 5.5%; top: 30%; max-width: 40%; max-height: 40%;">
+            <img src="Screenshot 2022-12-07 225302.png"
+                style="position: absolute; right: 5.5%; top: 30%; max-width: 40%; max-height: 40%;">
             <div class="li-lis" style="position: absolute; top: 15%; left: 10%;">
-                <li>Computer Engineering has multiple different fields, so every job requires a different set of knowledge.</li><li> System computing is for backend programming, which allows for information to be stored, edited, and pushed to be able to create a visual effect on the display.</li><li> Frontend programming is designed to create a nicer enviorment for the user to be able to understand. This is used in video games and web development, however, it is normally used less than backend programming.</li><li>Programming is about a lot of problem solving in a certain period of time.</li>
-        </div>
+                <li>Computer Engineering has multiple different fields, so every job requires a different set of
+                    knowledge(Harvey, 40).</li>
+                <li> System computing is for backend programming, which allows for information to be stored, edited, and
+                    pushed to be able to create a visual effect on the display("Computer System Engineers/Architects", California Career Zone).</li>
+                <li> Frontend programming is designed to create a nicer enviorment for the user to be able to
+                    understand. This is used in video games and web development, however, it is normally used less than
+                    backend programming.</li>
+                <li>Programming is about a lot of problem solving in a certain period of time("Computer System Engineers/Architects", California Career Zone).</li>
             </div>
-        <div id="duties2" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-                Duties Analysis
-                </h1>
-                <div class="li-lis">
-                    <li>Normally the short amount of time given for a specific task to be completed is harsh.</li><li> This is not traditionally an issue that computer engineers face. Computer engineers often face errors that occur after writing the program.</li><li> Problem solving is used both in debugging and in creating the base idea of what was required to be made.</li><li>I am very good at problem solving, at a considerably fast speed. This allows for very little time spent on debugging and more time spent on meeting the requirments that are given for the specific task.</li>
         </div>
+        <div id="duties2" style="visibility: hidden">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+                Duties Analysis
+            </h1>
+            <div class="li-lis">
+                <li>Normally the short amount of time given for a specific task to be completed is harsh.</li>
+                <li> This is not traditionally an issue that computer engineers face. Computer engineers often face
+                    errors that occur after writing the program.</li>
+                <li> Problem solving is used both in debugging and in creating the base idea of what was required to be
+                    made.</li>
+                <li>I am very good at problem solving, at a considerably fast speed. This allows for very little time
+                    spent on debugging and more time spent on meeting the requirments that are given for the specific
+                    task.</li>
+            </div>
         </div>
         <div id="skqu1" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Skill/Qualities
-                </h1>
-                <img src="High-Level-Solution-for-Twitter-System-Design.png"style="max-width: 40%; max-height: 40%; position: absolute; top: 20%; right: 4%">
-                <div class="li-lis" style="position: absolute; top: 15%; left: 10%;">
-                    <li>There are a couple different skills that you need to become a computer engineer. You need critical thinking to be able to identify the problem and use reasoning to be able to solve the problem.</li><li> Active listening is also needed as you need to be able to listen to what the company/employer wants.</li><li> You also need to be able to understand the system to create a correct program to have top preformance.</li>
+            </h1>
+            <img src="High-Level-Solution-for-Twitter-System-Design.png"
+                style="max-width: 40%; max-height: 40%; position: absolute; top: 20%; right: 4%">
+            <div class="li-lis" style="position: absolute; top: 15%; left: 10%;">
+                <li>There are a couple different skills that you need to become a computer engineer. You need critical
+                    thinking to be able to identify the problem and use reasoning to be able to solve the problem.</li>
+                <li> Active listening is also needed as you need to be able to listen to what the company/employer
+                    wants.</li>
+                <li> You also need to be able to understand the system to create a correct program to have top
+                    preformance.</li>
+                    <li>("Computer System Engineers/Architects", California Career Zone).</li>
+            </div>
         </div>
-                </div>
         <div id="skqu2" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Skill/Qualities Analysis
-                </h1>
-                <div class="li-lis">
-                    <li>This career requires you to almost be able to figure out what you need to do to create the desired user interface.</li><li> I can explain how the computer unmderstands the information, as well as explain how positioning, orientation, and content works.</li> <li>However, that is not to say that there is no "bugs". All bugs are solved with critical thinking.</li> <li>I already know how to solve most bugs by this method. Meaning that this is not an issue either.</li><li> Top preformance is needed when a system cannot handle what is being displayed.</li> <li>I do know of very simple ways in which to reduce this lag to a minimum, so the program will always run at a consistent speed.</li>
-                </div>
+            </h1>
+            <div class="li-lis">
+                <li>This career requires you to almost be able to figure out what you need to do to create the desired
+                    user interface.</li>
+                <li> I can explain how the computer unmderstands the information, as well as explain how positioning,
+                    orientation, and content works.</li>
+                <li>However, that is not to say that there is no "bugs". All bugs are solved with critical thinking.
+                </li>
+                <li>I already know how to solve most bugs by this method. Meaning that this is not an issue either.</li>
+                <li> Top preformance is needed when a system cannot handle what is being displayed.</li>
+                <li>I do know of very simple ways in which to reduce this lag to a minimum, so the program will always
+                    run at a consistent speed.</li>
+            </div>
         </div>
         <div id="edtrreq1" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Education/Training Requirements
-                </h1>
-                <img src="https://thumbs.dreamstime.com/b/graduate-cap-diploma-education-vintage-set-hand-drawn-vector-illustration-realistic-sketch-graduate-cap-diploma-education-156080146.jpg" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 10%;">
-                <img src="https://www.pngkey.com/png/full/264-2646582_logo-transparent-background-java.png" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 40%;">
-                <img src="https://assets-global.website-files.com/6047a9e35e5dc54ac86ddd90/63065002ce321b529d375e07_2e261bcd.png" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 75%;">
-                <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/objective-c/objective-c.png" style="max-width: 40%; max-height: 40%; position: absolute; bottom: 53.5%; left: 75%;">
-               <div class="li-lis">
-                <li>A bachelors degree in computer engineering or other simular subjects is required.</li><li> Usually required for people take courses in computer languages, such as Java, C++, or Objective-C.</li>
+            </h1>
+            <img src="https://thumbs.dreamstime.com/b/graduate-cap-diploma-education-vintage-set-hand-drawn-vector-illustration-realistic-sketch-graduate-cap-diploma-education-156080146.jpg"
+                style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 10%;">
+            <img src="https://www.pngkey.com/png/full/264-2646582_logo-transparent-background-java.png"
+                style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 40%;">
+            <img src="https://assets-global.website-files.com/6047a9e35e5dc54ac86ddd90/63065002ce321b529d375e07_2e261bcd.png"
+                style="max-width: 40%; max-height: 40%; position: absolute; bottom: 3.5%; left: 75%;">
+            <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/objective-c/objective-c.png"
+                style="max-width: 40%; max-height: 40%; position: absolute; bottom: 53.5%; left: 75%;">
+            <div class="li-lis">
+                <li>A bachelors degree in computer engineering or other simular subjects is required.</li>
+                <li> Usually required for people take courses in computer languages, such as Java, C++, or Objective-C.
+                </li>
+                <li>(Streissguth, 32-41).</li>
             </div>
-            </div>
+        </div>
         <div id="edtrreq2" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Education/Training Requirments Analysis
-                </h1>
-                <div class="li-lis">
-                <li> I am motivated to meet the cricumstances, as I already love programming </li><li>Challenges that come from it would give me fun. However, it may be a bit to simple...</li>
+            </h1>
+            <div class="li-lis" style="position: absolute; top: 20%; left: 10%;">
+                <li> I am motivated to meet the cricumstances, as I already love programming </li>
+                <li>Challenges that come from it would give me fun. However, it may be a bit to simple...</li>
             </div>
-            </div>
+        </div>
         <div id="bstschl1" style="visibility:hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Best Schools
-                </h1>
-                <img class="clgimg" style="position: absolute; right: 10%;top: 10%" src="miot.png" alt="Massachusetts Institute of Technology"/>
-                <img class="clgimg" style="position: absolute; right: 10%;top: 40%" src="https://pbs.twimg.com/profile_images/875395483128049664/8z_jvdLB_400x400.jpg" alt="Stanford University"/>
-                <img class="clgimg" style="position: absolute; right: 10%;top: 70%" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" alt="Carnegie Mellon University">
-                <img class="clgimg" style="position: absolute; right: 40%;top: 70%" src="https://marketing.illinois.edu/wp-content/uploads/2021/09/logo-internal-collaboration-1024x423.png" alt="University of Illinois Urbana-Champaign">
-                <img class="clgimg" style="position: absolute; right: 70%;top: 70%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="University of California, Berkeley">
-                <div style="            font-size: 30px;
+            </h1>
+            <img class="clgimg" style="position: absolute; right: 10%;top: 10%" src="miot.png"
+                alt="Massachusetts Institute of Technology" />
+            <img class="clgimg" style="position: absolute; right: 10%;top: 40%"
+                src="https://pbs.twimg.com/profile_images/875395483128049664/8z_jvdLB_400x400.jpg"
+                alt="Stanford University" />
+            <img class="clgimg" style="position: absolute; right: 10%;top: 70%"
+                src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png"
+                alt="Carnegie Mellon University">
+            <img class="clgimg" style="position: absolute; right: 40%;top: 70%"
+                src="https://marketing.illinois.edu/wp-content/uploads/2021/09/logo-internal-collaboration-1024x423.png"
+                alt="University of Illinois Urbana-Champaign">
+            <img class="clgimg" style="position: absolute; right: 70%;top: 70%"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png"
+                alt="University of California, Berkeley">
+            <div class="li-lis" style="font-size: 30px;
                 color: aliceblue;
-                max-width: 45%;
-                position: absolute;
-                top: 30%;
-                left: 10%;">
-                <li>Massachusetts Institute of Technology: #1 In computer engineering</li><li>Stanford University/University of California, Berkeley: #2 In computer engineering</li><li>Carnegie Mellon University/University of Illinois Urbana-Champaign: #4 in computer engineering</li>
-                </div>
+                max-width: 45%;">
+                <li>Massachusetts Institute of Technology: #1 In computer engineering</li>
+                <li>Stanford University/University of California, Berkeley: #2 In computer engineering</li>
+                <li>Carnegie Mellon University/University of Illinois Urbana-Champaign: #4 in computer engineering</li>
             </div>
+        </div>
         <div id="bstschl2" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Best Schools Analysis
             </h1>
             <div class="li-lis">
-                <li>All is mentioned as a status of ranking, not neccisarily the "best".</li><li>In being a higher ranking school for a specific subject, acceptance rate is harsh</li><li>I do believe however that I can meet those requirments, and be able to actually get into a college that I wish to be in.</li><li>What is in most priority is if the college in question provides me a tuition free college degree for masters.</li>
+                <li>All is mentioned as a status of ranking, not neccisarily the "best".</li>
+                <li>In being a higher ranking school for a specific subject, acceptance rate is harsh</li>
+                <li>I do believe however that I can meet those requirments, and be able to actually get into a college
+                    that I wish to be in.</li>
+                <li>What is in most priority is if the college in question provides me a tuition free college degree for
+                    masters.</li>
             </div>
         </div>
         <div id="sal1" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Salary
-                </h1>
-                <img src="https://media.istockphoto.com/id/182685777/photo/golden-dollar-sign.jpg?s=612x612&w=0&k=20&c=Drmh2WnpzKWh30Gbl8RgdnminU0MZHR0kEE1Q9CVMRM=" style="width: 40%; height: 70%; position: absolute; top: 15%; right: 10%;">
-                <div class="li-lis">
-                    <li>Lower annual wage: $70,000</li>
-                    <li>Median annual wage: $121,000</li>
-                    <li>Maximum annual wage: $221,000</li>
-                </div>
+            </h1>
+            <img src="https://media.istockphoto.com/id/182685777/photo/golden-dollar-sign.jpg?s=612x612&w=0&k=20&c=Drmh2WnpzKWh30Gbl8RgdnminU0MZHR0kEE1Q9CVMRM="
+                style="width: 40%; height: 70%; position: absolute; top: 15%; right: 10%;">
+            <div class="li-lis">
+                <li>Lower annual wage: $70,000</li>
+                <li>Median annual wage: $121,000</li>
+                <li>Maximum annual wage: $221,000</li>
+                <li>("Software Developers, Quality Analysists and Testers", Occupational Outlook Handbook)</li>
+            </div>
         </div>
         <div id="sal2" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Salary Analysis
             </h1>
             <div class="li-lis">
-            <li>This salary is more than enough to live a lifestyle I want.</li><li>Honestly, I want to become a CEO, and an inventor, however I need enough money to make that happen. Working this job with account of investments, should be enough money to make these goals happen.</li>
-        </div>
+                <li>This salary is more than enough to live a lifestyle I want.</li>
+                <li>Honestly, I want to become a CEO, and an inventor, however I need enough money to make that happen.
+                    Working this job with account of investments, should be enough money to make these goals happen.
+                </li>
+            </div>
         </div>
         <div id="prjtgrwth1" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Projected Growth
             </h1>
-            <img src="https://img.freepik.com/free-vector/red-arrow-going-up-with-bar-chart_1308-110320.jpg?w=2000" style="width: 40%; height: 40%; position: absolute; bottom: 3.5%; right: 5%;">
+            <img src="https://img.freepik.com/free-vector/red-arrow-going-up-with-bar-chart_1308-110320.jpg?w=2000"
+                style="width: 40%; height: 40%; position: absolute; bottom: 3.5%; right: 5%;">
             <div class="li-lis">
-                <ol>The job oppertunties are estimated to increase by 25% by 2031, due to the tech industry growing exponentialy(Software Developers, Quality assurance analysists and testers).</ol>
+                <ol>The job oppertunties are estimated to increase by 25% by 2031, due to the tech industry growing
+                    exponentialy("Software Developers, Quality assurance analysists and testers", Occupational Outlook Handbook).</ol>
             </div>
         </div>
         <div id="prjtgrwth2" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Projected Growth Analysis
             </h1>
             <div class="li-lis">
-                <li>As the limit to how many people can program increases, it will be easier to find a job</li><li>The avaliablity of this job works well with the skills I currently use.</li>
+                <li>As the limit to how many people can program increases, it will be easier to find a job</li>
+                <li>The avaliablity of this job works well with the skills I currently use.</li>
             </div>
         </div>
         <div id="ovrlbensyo" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
                 Overall Benefit to Self and Others
             </h1>
-            <img src="https://media.istockphoto.com/id/503451933/photo/green-checkmark.jpg?s=612x612&w=0&k=20&c=own8caimCiRrUqYsfusNdY3vaizeSm9h4Ar4oXCi1-0=" style="width: 40%; height: 50%; position: absolute; bottom: 3.5%; right: 3.5%;">
+            <img src="https://media.istockphoto.com/id/503451933/photo/green-checkmark.jpg?s=612x612&w=0&k=20&c=own8caimCiRrUqYsfusNdY3vaizeSm9h4Ar4oXCi1-0="
+                style="width: 40%; height: 50%; position: absolute; bottom: 3.5%; right: 3.5%;">
             <div class="li-lis">
-                <li>As a computer engineer you can help other people make calculations, write, and even do automations.</li><li>Even if most programs people think of are video games, many other things, anything on the computer, was made by programmers.</li><li>It let people call for help, allowed for people to meet eachother all across the globe.</li><li>Technology is something that everyone relies on nowadays.</li>
+                <li>As a computer engineer you can help other people make calculations, write, and even do automations.
+                </li>
+                <li>Even if most programs people think of are video games, many other things, anything on the computer,
+                    was made by programmers.</li>
+                <li>It let people call for help, allowed for people to meet eachother all across the globe.</li>
+                <li>Technology is something that everyone relies on nowadays.</li>
             </div>
         </div>
         <div id="rshout" style="visibility: hidden">
-        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Research Outcome
-        </h1>
-        <div class="li-lis">
-            <li>Computer engineering is something that I will surely do in the future.</li><li>As far as I see it, there is no real negative outcome, as it follows everything that I like to do.</li>
-        </div>
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+                Research Outcome
+            </h1>
+            <div class="li-lis">
+                <li>Computer engineering is something that I will surely do in the future.</li>
+                <li>As far as I see it, there is no real negative outcome, as it follows everything that I like to do.
+                </li>
+            </div>
         </div>
         <div id="wrkscite" style="visibility: hidden">
-        <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-        Works Cited
-        </h1>
-        <div class="cited">
-            <display-inside style="display: inline;"><li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook. U.S. Bureau of Labor <div style="padding-left: 1.5in">Statistics, United States Department of Labor, 09 Sept. 2022, <a href="https://www.bls.gov">www.bls.gov</a>. Accessed 15 Nov. 2022.</div></li></display-inside>
-        </div>
-        </div>
-        <div id="libib" style="visibility: hidden">
-            <h1 style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
-            Bibliography
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+                Works Cited
             </h1>
             <div class="cited">
-                <display-inside style="display: inline"><li>“Computer System Engineers/Architect.” California Career Zone. California Career Resource Network, 2022, <a style="padding-left: 1.5in" href="https://www.cacareerzone.org">www.cacareerzone.org</a>. Accessed 15 Nov. 2022.
-                </li></display-inside>
-                <li>Harvey, Janet. Makerspace Careers: Careers in Interactive Media. Rosen Publishing, 2020, pp. 40-41.
-                </li>
-                <display-inside style="display: inline">
-                <li>“Programmers and Developers.” Today's Military. The Department of Defense, 2022, <a href="https://www.todaysmilitary.com">www.todaysmilitary.com</a>. <div style="padding-left: 1.5in">Accessed 15 Nov. 2022.</div>
-                </li></display-inside>
-                <li>“Software Developers.” My Next Move. O-net, 18 Oct. 2022, <a href="https://www.mynextmove.org">www.mynextmove.org</a>. Accessed 17 Nov. 2022.
-                </li>
-                <display-inside style="display: inline">
-                <li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook. <div style="padding-left: 1.5in">U.S. Bureau of Labor Statistics, United States Department of Labor, 09 Sept. 2022, <a href="https://www.bls.gov">www.bls.gov</a>. Accessed 15 Nov. 2022.</div>
-                </li></display-inside>
+                <display-inside style="display: inline;">
+                    <display-inside style="display: inline">
+                        <li>“Computer System Engineers/Architect.” California Career Zone. California Career Resource
+                            Network, 2022, <a style="padding-left: 1.5in"
+                                href="https://www.cacareerzone.org">www.cacareerzone.org</a>. Accessed 15 Nov. 2022.
+                        </li>
+                    </display-inside>
+                    <li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook.
+                        U.S. Bureau of Labor <div style="padding-left: 1.5in">Statistics, United States Department of
+                            Labor, 09 Sept. 2022, <a href="https://www.bls.gov">www.bls.gov</a>. Accessed 15 Nov. 2022.
+                        </div>
+                    </li>
+                </display-inside>
                 <li>Streissguth, Tom. Great Jobs: Great Jobs in Technology. Reference Point Press, 2019, pp. 32-45.
                 </li>
             </div>
         </div>
-        <button id="button" style="position: absolute; left: .5%; top: 90%;" onclick="fullScreen()"><img src="fullScreen.png"
-            style="min-width: 15px; min-height: 15px; max-width: 50px; max-height: 50px;" align="center"></button>
+        <div id="libib" style="visibility: hidden">
+            <h1
+                style="text-decoration: underline; text-decoration-style:dashed;  text-decoration-color: white; position: absolute; top: 5%; left: 40%; margin: 0px">
+                Bibliography
+            </h1>
+            <div class="cited">
+                <display-inside style="display: inline">
+                    <li>“Computer System Engineers/Architect.” California Career Zone. California Career Resource
+                        Network, 2022, <a style="padding-left: 1.5in"
+                            href="https://www.cacareerzone.org">www.cacareerzone.org</a>. Accessed 15 Nov. 2022.
+                    </li>
+                </display-inside>
+                <li>Harvey, Janet. Makerspace Careers: Careers in Interactive Media. Rosen Publishing, 2020, pp. 40-41.
+                </li>
+                <display-inside style="display: inline">
+                    <li>“Programmers and Developers.” Today's Military. The Department of Defense, 2022, <a
+                            href="https://www.todaysmilitary.com">www.todaysmilitary.com</a>. <div
+                            style="padding-left: 1.5in">Accessed 15 Nov. 2022.</div>
+                    </li>
+                </display-inside>
+                <li>“Software Developers.” My Next Move. O-net, 18 Oct. 2022, <a
+                        href="https://www.mynextmove.org">www.mynextmove.org</a>. Accessed 17 Nov. 2022.
+                </li>
+                <display-inside style="display: inline">
+                    <li>“Software Developers, Quality Assurance Analysts and Testers.” Occupational Outlook Handbook.
+                        <div style="padding-left: 1.5in">U.S. Bureau of Labor Statistics, United States Department of
+                            Labor, 09 Sept. 2022, <a href="https://www.bls.gov">www.bls.gov</a>. Accessed 15 Nov. 2022.
+                        </div>
+                    </li>
+                </display-inside>
+                <li>Streissguth, Tom. Great Jobs: Great Jobs in Technology. Reference Point Press, 2019, pp. 32-45.
+                </li>
+            </div>
+        </div>
+        <button id="button" style="position: absolute; left: .5%; top: 90%;" onclick="fullScreen()"><img
+                src="fullScreen.png" style="min-width: 15px; min-height: 15px; max-width: 50px; max-height: 50px;"
+                align="center"></button>
     </div>
     <div class="image-visibilty" style="visibility: hidden">
         <img src="play.png" id="playImg" />
@@ -328,7 +456,6 @@
         var firstTxtD = document.getElementById("editableTextNo4");
         var firstTxtE = document.getElementById("editableTextNo5");
         var firstTxtF = document.getElementById("editableTextNo6");
-        var video = document.getElementById("video");
         //Other components for document
         var canvas = document.getElementById("console");
         var c = canvas.getContext('2d');
@@ -386,17 +513,17 @@
         let wait;
         function slideCheck() {
             if (mouseInput && mouseX > (screenOrientation + screenOrientation)) {
-                if (slideNum == resources.length){
+                if (slideNum == resources.length) {
                     slideNum = resources.length - 1;
                 } else {
-                slideNum = slideNum + 1;
+                    slideNum = slideNum + 1;
                 }
             }
             else if (mouseInput && mouseX < (window.innerWidth / 3)) {
-                if(slideNum == 0){
+                if (slideNum == 0) {
                     slideNum = 0;
                 }
-                else{
+                else {
                     slideNum = slideNum - 1;
                 }
             }
@@ -404,8 +531,8 @@
             resources[slideNum - 1].style.visibility = "hidden";
             resources[slideNum + 1].style.visibility = "hidden";
 
-            if (slideNum  == 2){
-                wait = setTimeout(e => {anim1(); clearTimeout(wait)}, 5000);
+            if (slideNum == 2) {
+                wait = setTimeout(e => { anim1(); clearTimeout(wait) }, 5000);
                 animation.style.visibility = "visible";
                 txtInvis.style.visibility = "visible";
             }
@@ -423,10 +550,7 @@
                 i = 0;
             }
         }
-
-        function notif(){
-            alert("Due to content designed for full screen only, leave document in fullscreen entire time while viewing the content. Failure to do so will cause the text to mis-align. To exit fullscreen press 'esc' or 'F11'");
-        }
     </script>
 </body>
+
 </html>

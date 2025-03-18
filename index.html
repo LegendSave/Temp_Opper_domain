@@ -527,7 +527,9 @@
                 }
             }
             resources[slideNum].style.visibility = "visible";
+            if(slideNum != 0){
             resources[slideNum - 1].style.visibility = "hidden";
+            }
             resources[slideNum + 1].style.visibility = "hidden";
 
             if (slideNum == 2) {

@@ -445,6 +445,7 @@
     </div>
     </div>
     <script "Main" defer>
+    alert("Note: Website only works on primary monitor, due to some issues. If interactions do not work, please switch to main monitor");
         //Intialization
         //Animation components
         var animation = document.getElementById("animation");
@@ -527,7 +528,7 @@
                 }
             }
             resources[slideNum].style.visibility = "visible";
-            if(slideNum != 0){
+            if(sideNum != 0){
             resources[slideNum - 1].style.visibility = "hidden";
             }
             resources[slideNum + 1].style.visibility = "hidden";
